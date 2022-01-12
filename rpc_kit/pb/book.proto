@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+package pb;
+
+service BookService {
+    rpc Add(AddBookReq) returns (AddBookResp) {}
+    rpc Get(GetBookReq) returns (AddBookResp) {}
+    rpc AddStream(stream AddBookReq) returns (AddBookResp) {}
+    rpc GetStream(stream GetBookReq) returns (stream GetBookResp) {}
+}
+
+message AddBookReq {
+    string book_name = 1;
+    string author = 2;
+    string press = 3;
+    float price = 4;
+    string description = 5;
+}
+
+message AddBookResp {
+    string book_id = 1;
+}
+
+message GetBookReq {
+    string keyword = 1;
+    string press = 2;
+}
+
+message GetBookResp {
+    string book_id = 1;
+    string book_name = 2;
+    string author = 3;
+    float price = 4;
+}

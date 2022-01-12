@@ -1,0 +1,9 @@
+
+.idea
+.DS_Store
+.air*.conf
+
+logs/
+tmp/
+
+/config_etcd/config_test.go

@@ -1,0 +1,9 @@
+Env: dev
+Address: 127.0.0.1
+Port: 8030
+MySQL:
+  DBName: dev_test
+  Password: 123456
+  Addr: 127.0.0.1
+  Port: 3306
+  ChartSet: utf8mb4
